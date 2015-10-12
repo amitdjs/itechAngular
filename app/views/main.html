@@ -1,0 +1,30 @@
+ <div class="col-md-12">
+  <button data-ng-click="main.addNewCustomer()" class="btn">{{main.ss}}</button>
+  <input type="text" data-ng-model="searchText" data-ng-change="searchCustomer()" placeholder="Search Customers" class="search-box"/>
+</div>
+<br>
+
+<div class="col-md-12">
+  <div class="col-md-6" >
+    <div data-ng-repeat="customer in main.customersList">
+      <div class="customer-list-item" data-ng-class="{selected: main.isSelected(customer.id)}" data-ng-click="main.fetchDetails(customer.id, $index)">
+        <div class="close" style="padding: 10px" title="Delete" data-ng-click="main.delete(customer.id)">X</div>
+        <h3>{{customer.name}}</h3>
+        <h5>{{customer.location}}</h5>
+        <h5>{{customer.mail}}</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="jumbotron">
+      <p class="lead">
+      <div class="customer-list-item" data-ng-if="main.details.name">
+        <h2>{{main.details.index}} {{main.details.name}}</h2>
+        <h4>{{main.details.location}}</h4>
+        <h4>{{main.details.mail}}</h4>
+      </div>
+      <div class="customer-list-item" data-ng-if="!main.details.name">Please select customer from left side to view detail</div>
+      </p>
+    </div>
+  </div>
+</div>

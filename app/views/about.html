@@ -1,0 +1,21 @@
+<div class="add-modal">
+  <div class="close" style="padding: 10px" data-ng-click="close();">X</div>
+  <form class="add-form">
+    <div class="form-field">
+    <label for="name">Name: </label>
+    <input type="text" id="name" data-ng-model="name" placeholder="Name"/>
+    </div>
+    <div class="form-field">
+      <label for="location">Location: </label>
+      <input type="text" id="location" data-ng-model="Location" placeholder="Location"/>
+    </div>
+    <div class="form-field">
+      <label for="Email">Email: </label>
+      <input type="email" id="Email" data-ng-model="Email" placeholder="Email"/>
+    </div>
+    <div>
+      <button style="margin-left: 50px" data-ng-click="addCustomerToList()">Add</button>
+    </div>
+
+  </form>
+</div>

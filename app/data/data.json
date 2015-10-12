@@ -1,0 +1,5 @@
+[
+  {"id": 0, "name": "someName", "location": "someLocation", "mail": "some@Mail.in"},
+  {"id": 1, "name": "someName", "location": "someLocation", "mail": "some@Mail.in"},
+  {"id": 2, "name": "someName", "location": "someLocation", "mail": "some@Mail.in"}
+]
